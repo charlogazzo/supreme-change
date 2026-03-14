@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+@keyframes drive {
+  from {
+    transform: translate(-50%, 0);
+  }
+  to {
+    transform: translate(-50%, -80vh);
+  }
+}
+
+@layer utilities {
+  .animate-drive {
+    animation: drive 7s linear forwards;
+  }
+}
