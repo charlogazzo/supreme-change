@@ -19,14 +19,16 @@ export const App = () => {
       {/* Grass left */}
       <div className="flex-1 bg-green-500"></div>
       {/* Road */}
-      <div className="flex-1 bg-gray-500 relative">
+      <div className="flex-2 bg-gray-500 relative">
         {/* Start line */}
         <div className="absolute bottom-0 left-0 w-full h-2 bg-white"></div>
         {/* End line */}
         <div className="absolute top-0 left-0 w-full h-2 bg-black"></div>
+        {/* Lane separator */}
+        <div className="lane-separator absolute left-1/2 top-0 bottom-0 w-1"></div>
         {/* Car */}
         <div
-          className={`absolute bottom-10 left-1/2 w-20 h-10 bg-yellow-400 rounded
+          className={`absolute bottom-10 left-3/4 w-10 h-20 bg-yellow-400 rounded
           ${started ? 'animate-drive' : ''}`}
         ></div>
       </div>

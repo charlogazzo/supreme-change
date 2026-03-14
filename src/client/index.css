@@ -14,3 +14,7 @@
     animation: drive 7s linear forwards;
   }
 }
+
+.lane-separator {
+  background: repeating-linear-gradient(to bottom, white 0px, white 10px, transparent 10px, transparent 20px);
+}
