@@ -2,19 +2,90 @@
 
 @keyframes drive {
   from {
-    transform: translate(-50%, 0);
+    transform: translateY(0);
   }
   to {
-    transform: translate(-50%, -80vh);
+    transform: translateY(-105vh);
+  }
+}
+
+@keyframes showCheckeredLine {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
 @layer utilities {
   .animate-drive {
-    animation: drive 7s linear forwards;
+    animation: drive 7.4s linear forwards;
+  }
+  .animate-checkered-line {
+    animation: showCheckeredLine 0.3s ease-in 7.4s forwards;
   }
 }
 
 .lane-separator {
-  background: repeating-linear-gradient(to bottom, white 0px, white 10px, transparent 10px, transparent 20px);
+  background: repeating-linear-gradient(
+    to bottom,
+    white 0px,
+    white 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+/* NEW */
+
+/*.car {
+  transform: translateX(-50%);
+  transform-origin: center bottom;
+  transition:
+    left 0.25s ease,
+    transform 0.25s ease;
+}
+
+.car-turn-left {
+  transform: translateX(-50%) rotate(-20deg);
+}
+
+.car-turn-right {
+  transform: translateX(-50%) rotate(20deg);
+}*/
+
+.car {
+  transform-origin: center bottom;
+  transition: transform 0.25s ease;
+}
+
+.car-turn-left {
+  transform: rotate(-20deg);
+}
+
+.car-turn-right {
+  transform: rotate(20deg);
+}
+
+.checkered-line {
+  background-image: repeating-linear-gradient(
+    90deg,
+    white 0px,
+    white 10px,
+    black 10px,
+    black 20px
+  );
+  opacity: 1;
+}
+
+.checkered-line-alt {
+  background-image: repeating-linear-gradient(
+    90deg,
+    black 0px,
+    black 10px,
+    white 10px,
+    white 20px
+  );
+  opacity: 1;
 }
